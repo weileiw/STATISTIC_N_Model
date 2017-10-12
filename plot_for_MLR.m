@@ -37,18 +37,18 @@ SI    = SI(iposi);
 O2min = O2min(iposi);
 
 % get z-score
-NFz = (NF-mean(NF))/std(NF);
-DFe = (DFe-mean(DFe))/std(DFe);
-DIP = (DIP-mean(DIP))/std(DIP);
-DIN = (DIN-mean(DIN))/std(DIN);
+NFz   = (NF-mean(NF))/std(NF);
+DFe   = (DFe-mean(DFe))/std(DFe);
+DIP   = (DIP-mean(DIP))/std(DIP);
+DIN   = (DIN-mean(DIN))/std(DIN);
 Pstar = (Pstar-mean(Pstar))/std(Pstar);
-SST = (SST-mean(SST))/std(SST);
-SI = (SI-mean(SI))/std(SI);
+SST   = (SST-mean(SST))/std(SST);
+SI    = (SI-mean(SI))/std(SI);
 O2min = (O2min-mean(O2min))/std(O2min);
 
 T = [0 0 0 0 0 0 0; 1 0 0 0 0 0 0; 0 1 0 0 0 0 0; 0 0 1 0 0 0 0; 0 0 0 1 0 0 0; 0 0 0 0 1 0 0;...
-      0 0 0 0 0 1 0; 2 0 0 0 0 0 0; 0 2 0 0 0 0 0; 0 0 2 0 0 0 0; 0 0 0 2 0 0 0;...
-      0 0 0 0 2 0 0; 0 0 0 0 0 2 0];
+     0 0 0 0 0 1 0; 2 0 0 0 0 0 0; 0 2 0 0 0 0 0; 0 0 2 0 0 0 0; 0 0 0 2 0 0 0;...
+     0 0 0 0 2 0 0; 0 0 0 0 0 2 0];
 tbl = [DFe,DIP,DIN,SST,SI,O2min];
 mdl = stepwiselm(tbl,NFz,'quadratic','Criterion','Rsquared','PEnter',0.1)
 %mdl = stepwiselm(tbl,NFz,'quadratic','Criterion','Rsquared','PRemove',0.02)
