@@ -3,7 +3,7 @@ DNW2d_N2P_tanh.mat
 NF2d_OPT_N2P_tanh.mat
 DNS2d_N2P_tanh.mat
 Glob_pridiction.mat
-/CESM/*.mat
-/OCIM/*.mat
+/CESM/*.mat *.nc
+/OCIM/*.mat *.nc
 /CESM/*.eps
 /OCIM/*.eps
